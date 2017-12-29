@@ -1,0 +1,11 @@
+image: maven:3.3.9
+pipelines:
+  branches:
+    feature-branch-JIRA-123:
+      - step:
+          script:
+            - mvn clean install
+    master:
+      - step:
+          script:
+            - mvn clean install
